@@ -1,0 +1,14 @@
+[project]
+name = "zipper-tree"
+version = "0.1.0"
+description = "Immutable zipper for node trees with O(1) navigation and O(depth) rebuild."
+requires-python = ">=3.10"
+dependencies = []
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
