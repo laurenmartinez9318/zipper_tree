@@ -43,3 +43,10 @@ The zipper can only move to a left or right sibling if the focus has a parent.  
 - `Zipper.next()`, `Zipper.prev()` — depth-first pre-order traversal.
 - `Zipper.set_value(value)`, `Zipper.set_children(children)` — immutable updates.
 - `Zipper.root()` — rebuild and return the root.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
